@@ -2,7 +2,7 @@
 sidebar_label: 'SMA Fetch Control Number'
 ---
 
-# SMA Fetch Conrol Number
+# SMA Fetch Control Number
 
 ## Overview
 
