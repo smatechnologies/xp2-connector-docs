@@ -6,7 +6,7 @@ sidebar_label: 'Auto Reply File'
 
 ## Overview
 
-This configuration file specifies the responses to be made for various consule messges.
+This configuration file specifies the responses to be made for various consule messages.
 
 ## Parameters
 
