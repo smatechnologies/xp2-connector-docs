@@ -1,49 +1,52 @@
 ---
 sidebar_label: 'SMA Save DSX List Rpt Number'
+title: 'SMAListRptNumbers'
+description: 'Use the SMAListRptNumbers script to find and store the first and last report numbers in the DSX List as OpCon properties.'
+tags:
+  - Reference
+  - Automation Engineer
+  - Jobs
 ---
 
-# SMA Save DSX List Rpt Number
+# SMAListRptNumbers
 
-## Overview
+## What is it?
 
-This application finds the first and the last report numbers in the DSX List. These report numbers are stored in the specified properties.
+This script finds the first and the last report numbers in the DSX List and stores those values in the specified OpCon properties. The stored values can then be referenced by downstream jobs that need to process reports within that range.
+
+- Use this script when downstream processing depends on knowing the starting and ending report numbers in the DSX List
+- Run this script before jobs that iterate over or reference DSX List report numbers
 
 :::note
-The configuration file for this program must be set up priot to executing your first XP2 job. Please refer to the [MSGIN File](../reference/msgin-file) information in the Reference section..
+The configuration file for this script must be set up prior to running your first XP2 job. Refer to the [MSGIN File](../reference/msgin-file) information in the Reference section.
 :::
 
-## Command Line
+## Command line
 
-This program is launched via an OpCon job with the following command line.
+Run this script from an OpCon job using the following command line:
 
 ```
 [[SMAXPSetup]] SMAFetchQueuedDocNumber.pl -e <Ending Property Name> -s <Starting Property Name>
 ```
 
-## Command Line Switches
+## Command line switches
 
-:::note Notes
-The arguments should be specified in alphabetical order. There are situations where an argument may not be recognized if the order is incorrect.
+:::note
+Specify the arguments in alphabetical order. Some arguments may not be recognized if the order is incorrect.
 :::
 
-### -e 
-This is the name of the property that will be created with the ending report number in the DSX List file.
-
-:::caution
-Do not use a property name that has embedded spaces in the name.
-:::
-
-### -s
-This is the name of the property that will be created with the starting report number in the DSX List file.
-
-:::caution
-Do not use a property name that has embedded spaces in the name.
-:::
-
+| Switch | Required | Description |
+|---|---|---|
+| `-e` | Yes | The name of the property to create with the ending report number in the DSX List file. Do not use a property name that contains spaces. |
+| `-s` | Yes | The name of the property to create with the starting report number in the DSX List file. Do not use a property name that contains spaces. |
 
 :::tip Example
-In this example, we would updated properties with the start and end report number. 
+The following command updates properties with the start and end report numbers:
 ```
 [[SMAXPSetup]]  SMAFetchQueuedDocNumber.pl -e DSXListEndPropertyName -s DSXListStartPropertyName
 ```
 :::
+
+## Related topics
+
+- [MSGIN File](../reference/msgin-file.md)

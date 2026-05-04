@@ -1,21 +1,34 @@
 ---
 sidebar_label: 'Wait for XP Job'
+title: 'WaitForXPJob'
+description: 'Use wait_for_xp_job.pl to pause an OpCon workflow until a specified XP2 child job completes.'
+tags:
+  - Reference
+  - Automation Engineer
+  - Jobs
 ---
 
-# Wait for XP Job
+# WaitForXPJob
 
-## Overview
+## What is it?
 
-There are occasions when an XP2 job starts a child job (internally) and the **child job** needs to be waited on before continuing the next processing step. This application will do that. The application will always exit with a 0.
+`wait_for_xp_job.pl` waits for an XP2 child job to complete before allowing the OpCon workflow to continue. The script always exits with a return code of `0`.
 
-## Command Line
+- Use this script when an XP2 job starts a child job internally and downstream processing must not begin until the child job finishes
+- Add it as a dependent job in your OpCon schedule to hold subsequent steps until the child job completes
 
-This program is launched via an OpCon job with the following command line.
+## Command line
+
+Run this script from an OpCon job using the following command line:
 
 ```
 [[SMAXPSetup]] wait_for_xp_job.pl <XP2 Job Name>
 ```
 
 :::note
-The XP2 Job Name should be specified as it appears in the console log.
+Specify the XP2 job name exactly as it appears in the console log.
 :::
+
+## Related topics
+
+- [Run XP Job](./run_xp_job.md)
