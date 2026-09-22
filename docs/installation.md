@@ -37,6 +37,11 @@ cd /ops/bin
 ```
 tar xvf /tmp/XP2Applications-<version>.tar
 ```
+
+:::caution Confirm the scripts extracted into `/ops/bin` itself
+List `/ops/bin` and confirm you see the scripts, such as `CreateXPEnvForPerl.ksh`, `run_xp_job.pl` and `run_xp_job.ini`. If you instead see a single directory named after the release, the archive carried a top-level directory — move its contents into `/ops/bin` before continuing. Every step that follows, along with the `SMAXPSetup` property and the `run_xp_job.ini` defaults, expects the scripts directly in the installation directory.
+:::
+
 5. Under the installation directory, create a `locks` directory:
 ```
 mkdir /ops/bin/locks
