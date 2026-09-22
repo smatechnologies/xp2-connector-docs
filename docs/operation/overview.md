@@ -26,6 +26,7 @@ The Operation section covers the scripts that OpCon uses to start, monitor, and 
 | [Maintain Logfiles](./maintain_logfiles.md) | Deletes XP2 Connector log files older than a configured number of days. |
 | [SMACaptureDatestamp](./smacapturedatestamp.md) | Captures the current date and time as an OpCon property to use as a boundary for control number lookups. |
 | [SMACheckConsoleLog](./smacheckconsolelog.md) | Triggers an OpCon event when a specified key is found in the XP2 console log. |
+| [SMACheckLockFiles](./smachecklockfiles.md) | Reports which `run_xp_job` lock files belong to processes that are no longer running. |
 | [SMAFetchControlNumber](./smafetchcontrolnumber.md) | Retrieves a batch control number from the XP2 console log and stores it in an OpCon property. |
 | [SMAFetchDocNumber](./smafetchdocnumber.md) | Retrieves the document number of an XP2 job output file and stores it in an OpCon property. |
 | [SMAFetchQueuedDocNumber](./smafetchqueueddocnumber.md) | Retrieves the document number of a queue entry matching specified parameters and stores it in an OpCon property. |

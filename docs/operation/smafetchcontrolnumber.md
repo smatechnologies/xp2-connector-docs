@@ -31,10 +31,6 @@ Run this script from an OpCon job using the following command line:
 
 ## Command line switches
 
-:::note
-Specify the arguments in alphabetical order. Some arguments may not be recognized if the order is incorrect.
-:::
-
 | Switch | Required | Description |
 |---|---|---|
 | `-c` | Yes | The location of the configuration file to use. |

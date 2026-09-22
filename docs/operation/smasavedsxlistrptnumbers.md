@@ -31,10 +31,6 @@ Run this script from an OpCon job using the following command line:
 
 ## Command line switches
 
-:::note
-Specify the arguments in alphabetical order. Some arguments may not be recognized if the order is incorrect.
-:::
-
 | Switch | Required | Description |
 |---|---|---|
 | `-e` | Yes | The name of the property to create with the ending report number in the DSX List file. Do not use a property name that contains spaces. |

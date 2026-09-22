@@ -37,6 +37,22 @@ To run the XP2 job called CONLIST:
 ```
 :::
 
+## Return codes
+
+The return code of the OpCon job is the return code of `run_xp_job.pl`.
+
+| Code | Meaning |
+|---|---|
+| `0` | The XP2 job completed successfully. |
+| `1` | The XP2 job did not complete successfully, **or** the connector could not submit or cancel it. Check the log to tell these apart. |
+| `19` | Required arguments were missing from the command line. |
+| `20` | The connector gave up waiting for an XP2 job slot. Governed by `DefaultWaitForSlotTimeout` in [Run XP Job INI](../reference/run-xp-job-ini). |
+| `21` | The connector gave up waiting for the job to start. Governed by `DefaultWaitForStartTimeout` in [Run XP Job INI](../reference/run-xp-job-ini). |
+
+:::note Code `1` covers two different situations
+A `1` means either the XP2 job ran and failed, or the connector never got it submitted. The log records which — look for `Error on submit` or `Error on cancel` to identify the second case.
+:::
+
 ## Tips and tricks
 
 - If `<arguments>` contain double quotes, they must be escaped.

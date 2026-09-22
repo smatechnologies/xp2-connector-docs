@@ -54,7 +54,7 @@ An optional path to an autoreply file. When specified, the connector looks up co
 | `DefaultWaitForSlotTimeout` | Seconds to wait for the lock file | 600 | Increase for systems with long-running concurrent jobs |
 | `DefaultWaitForStartTimeout` | Seconds to wait for a job start message | 36000 | Increase for jobs with long startup times |
 | `DefaultWaitAfterJobTimeout` | Seconds to wait after job completion | 5 | Increase if output files are not fully written before the next step reads them |
-| `LockFileDirectory` | Path where lock files are created | `/ops/bin/` | Must be writable by the process running the connector |
+| `LockFileDirectory` | Path where lock files are created | `/ops/bin/locks` | Must exist and be writable by the process running the connector. The installation procedure creates it. Refer to [SMACheckLockFiles](../operation/smachecklockfiles) for inspecting the lock files it holds. |
 | `sma_status` | Path to the sma_status application | `/usr/local/lsam/bin/sma_status` | Must match the actual installation path of the agent |
 | `AutoReplyFile` | Path to the autoreply INI file | `/ops/bin/autoreply.ini` | Optional — omit if no automated console responses are needed |
 

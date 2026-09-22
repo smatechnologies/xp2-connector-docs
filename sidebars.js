@@ -19,6 +19,7 @@ module.exports = {
         'operation/maintain_logfiles',
         'operation/smacapturedatestamp',
         'operation/smacheckconsolelog',
+        'operation/smachecklockfiles',
         'operation/smafetchcontrolnumber',
         'operation/smafetchdocnumber',
         'operation/smafetchqueueddocnumber',

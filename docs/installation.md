@@ -17,7 +17,7 @@ The XP2 Connector is a set of Perl scripts installed on the AIX platform where X
 - Install the connector when setting up OpCon integration with FiServ XP2 for the first time
 - Reinstall from this procedure after a full system rebuild or migration to a new AIX host
 
-It is recommended that the XP2 interface tools be installed in `/ops/bin`. The distribution file is named `XPApplications.tar`.
+It is recommended that the XP2 interface tools be installed in `/ops/bin`. The distribution file is named `XP2Applications-<version>.tar` — for example, `XP2Applications-20.03.00.tar`. The version in the file name changes with each release.
 
 ## Installation steps
 
@@ -35,7 +35,7 @@ cd /ops/bin
 ```
 4. Untar the distribution file:
 ```
-tar xvf /tmp/XPApplications.tar
+tar xvf /tmp/XP2Applications-<version>.tar
 ```
 5. Under the installation directory, create a `locks` directory:
 ```
