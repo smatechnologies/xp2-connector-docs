@@ -28,8 +28,7 @@ Run this script from an OpCon job using the following command line:
 ## Command line switches
 
 :::note
-- Specify the arguments in alphabetical order. Some arguments may not be recognized if the order is incorrect.
-- All options except `-o` and `-s` are required to fully qualify which document number to select.
+All options except `-o` and `-s` are required to fully qualify which document number to select.
 :::
 
 | Switch | Required | Description |

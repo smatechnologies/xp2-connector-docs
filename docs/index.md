@@ -44,6 +44,7 @@ The XP2 Connector integrates OpCon workload automation with the XP2 software fro
 - [Maintain Log Files](./operation/maintain_logfiles.md)
 - [SMACaptureDatestamp](./operation/smacapturedatestamp.md)
 - [SMACheckConsoleLog](./operation/smacheckconsolelog.md)
+- [SMACheckLockFiles](./operation/smachecklockfiles.md)
 - [SMAFetchControlNumber](./operation/smafetchcontrolnumber.md)
 - [SMAFetchDocNumber](./operation/smafetchdocnumber.md)
 - [SMAFetchQueuedDocNumber](./operation/smafetchqueueddocnumber.md)

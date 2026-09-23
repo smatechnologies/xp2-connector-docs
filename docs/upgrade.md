@@ -41,7 +41,7 @@ cp run_xp_job.ini /tmp
 ```
 5. Untar the distribution file in the `/ops/bin` directory:
 ```
-tar -xvf XP2Applications-20.00.00.tar
+tar -xvf XP2Applications-<version>.tar
 ```
 6. Move the configuration files back into `/ops/bin` to restore the configuration:
 ```
@@ -50,6 +50,11 @@ mv /tmp/SMAFetchControlNumber.ini /ops/bin
 mv /tmp/autoreply.ini /ops/bin
 mv /tmp/run_xp_job.ini /ops/bin
 ```
+7. Confirm the scripts are in the directory the `SMAXPSetup` global property points to. If the property is `/ops/bin/CreateXPEnvForPerl.ksh`, that file must exist at that path after the upgrade.
+
+:::caution Check the scripts landed where you expect
+If the scripts are not where `SMAXPSetup` points, OpCon jobs keep running the previous version and the upgrade appears to have succeeded while changing nothing.
+:::
 
 ## Related topics
 
